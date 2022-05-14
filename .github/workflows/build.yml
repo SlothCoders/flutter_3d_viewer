@@ -3,10 +3,10 @@ name: Build & deploy
 on:
   push:
     branches:
-      - master
+      - develop
   pull_request:
     branches:
-      - master
+      - develop
 
 jobs:
   build:
@@ -20,7 +20,7 @@ jobs:
     - name: Install Flutter
       uses: subosito/flutter-action@v2
       with:
-        channel: 'stable' # or: 'beta' or 'master'
+        channel: 'stable' # or: 'beta' or 'develop'
     - run: flutter --version
     
     - name: Get dependencies
@@ -42,7 +42,7 @@ jobs:
     name: Deploy
     needs: build
     runs-on: self-hosted
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/develop'
     
     steps:
     - name: Download artifact
