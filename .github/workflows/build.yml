@@ -43,7 +43,9 @@ jobs:
     
     # - name: Test project
     #   run: flutter test
-    
+    - name: remove old build
+      run: rm -r ./build/web
+
     - name: Build release project
       run:  webdev build --output web:build/web
 
