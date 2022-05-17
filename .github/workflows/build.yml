@@ -26,8 +26,6 @@ jobs:
     - name: Clean
       run: flutter clean
 
-    - name: Webdev
-      run: dart pub global activate webdev
 
     - name: Upgrade
       run: flutter pub upgrade
