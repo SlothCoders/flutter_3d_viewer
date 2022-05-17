@@ -45,7 +45,7 @@ jobs:
     #   run: flutter test
     
     - name: Build release project
-      run:  webdev build --output web:build
+      run:  webdev build --output web:build/web
 
     - name: Upload production-ready build files
       uses: actions/upload-artifact@v2
