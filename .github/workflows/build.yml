@@ -41,10 +41,8 @@ jobs:
     - name: Get dependencies
       run: dart pub get
     
-    # - name: Test project
-    #   run: flutter test
-    - name: remove old build
-      run: rm -r ./build/web
+    - name: Test project
+      run: flutter test
 
     - name: Build release project
       run:  flutter build web
